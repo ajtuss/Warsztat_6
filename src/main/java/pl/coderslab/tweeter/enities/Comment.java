@@ -24,7 +24,7 @@ public class Comment {
     private LocalDateTime created;
 
     @PrePersist
-    public void setCreateDate(){
+    public void onCreate(){
         created = LocalDateTime.now();
     }
 

@@ -20,6 +20,11 @@ public class Tweet {
     @ManyToOne
     private User user;
 
+    @PrePersist
+    public void onCreate(){
+        created = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
